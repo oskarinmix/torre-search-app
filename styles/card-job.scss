@@ -1,10 +1,10 @@
-.card-user {
+.card-job {
   margin: 5px 5px;
   height: 100px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 20px;
-  flex-wrap: wrap;
   overflow: hidden;
   img {
     height: 90%;
@@ -17,7 +17,6 @@
     font-weight: bold;
     padding: 20px;
   }
-
   span.skill {
     color: #f3f3f3;
     padding: 5px;

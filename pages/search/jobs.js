@@ -2,6 +2,7 @@ import React from "react";
 import Axios from "axios";
 import Link from "next/link";
 import Layout from "../../components/Layout";
+import CardJob from "../../components/CardJob";
 
 const SearchOpportunities = (props) => {
   const [search, setSearch] = React.useState("");
@@ -63,15 +64,19 @@ const SearchOpportunities = (props) => {
 
       {results && (
         <React.Fragment>
-          <ul>
-            {results.results.map((result) => (
-              <li key={result.id}>
-                <Link href={`/opportunities/${result.id}`}>
-                  <a>{result.objective}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {results.results.map((result) => (
+            <Link href={`/opportunities/${result.id}`} key={result.id}>
+              <a>
+                <CardJob
+                  img={result.organizations[0].picture}
+                  title={result.objective}
+                  company={result.organizations[0].name}
+                  skills={result.skills}
+                />
+              </a>
+            </Link>
+          ))}
+
           <button onClick={() => (page > 0 ? setPage(page - 1) : 0)}>
             prev
           </button>

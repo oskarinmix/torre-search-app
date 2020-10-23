@@ -1,13 +1,13 @@
 import React from "react";
-import "../styles/card-user.scss";
+import "../styles/card-job.scss";
 const defaultImg = "/img/default.jpg";
-const CardUser = ({ img, name, username, skills }) => {
+const CardUser = ({ img, title, company, skills }) => {
   return (
     <React.Fragment>
-      <div className="card-user">
+      <div className="card-job">
         <img src={img ? img : defaultImg} alt="profile" />
-        <h1>{name}</h1>
-        <span> {username}</span>
+        <h1>{title}</h1>
+        <span> {company}</span>
         {skills.map((skill) => (
           <span className="skill" key={skill.id}>
             {skill.name}

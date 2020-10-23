@@ -69,6 +69,7 @@ const SearchPeople = () => {
                   img={result.picture}
                   name={result.name}
                   username={result.username}
+                  skills={result.skills}
                 />
               </a>
             </Link>
