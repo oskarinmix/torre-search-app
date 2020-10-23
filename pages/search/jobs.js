@@ -72,6 +72,9 @@ const SearchOpportunities = (props) => {
                   title={result.objective}
                   company={result.organizations[0].name}
                   skills={result.skills}
+                  compensation={
+                    result.compensation ? result.compensation.data : null
+                  }
                 />
               </a>
             </Link>
