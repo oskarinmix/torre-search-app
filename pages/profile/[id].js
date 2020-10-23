@@ -1,32 +1,42 @@
 import React from "react";
 import Axios from "axios";
 import Layout from "../../components/Layout";
+import ProfileCard from "../../components/ProfileCard";
+import ProfileError from "./../../components/ProfileError";
 const defaultImg = "/img/default.jpg";
-const Profile = ({ data }) => {
+const Profile = ({ data, error }) => {
   React.useEffect(() => {
     console.log("data", data);
   }, []);
+
+  if (error) {
+    return (
+      <Layout>
+        <ProfileError />
+      </Layout>
+    );
+  }
   return (
     <Layout>
-      <img
-        src={
-          data.person.pictureThumbnail
-            ? data.person.pictureThumbnail
-            : defaultImg
-        }
-        alt="profile"
-      />
-      <h1>Perfil de {data.person.name}</h1>
+      <ProfileCard data={data} />
     </Layout>
   );
 };
 
 Profile.getInitialProps = async (props) => {
   const username = props.query.id;
-  const res = await Axios(`http://localhost:3000/api/profile/${username}`);
-  return {
-    data: res.data,
-  };
+  try {
+    const res = await Axios(`http://localhost:3000/api/profile/${username}`);
+    return {
+      data: res.data,
+      error: false,
+    };
+  } catch (e) {
+    return {
+      data: e,
+      error: true,
+    };
+  }
 };
 
 export default Profile;

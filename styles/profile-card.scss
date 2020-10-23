@@ -1,0 +1,32 @@
+.profile-card {
+  width: 50%;
+  padding: 50px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #cddc39;
+  border-radius: 10px;
+  img {
+    border-radius: 50%;
+    height: 250px;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+  h1 {
+    color: #cddc39;
+  }
+  a {
+    margin-top: 30px;
+    display: flex;
+    img {
+      height: 25px;
+    }
+    h3 {
+      color: #cddc39;
+    }
+  }
+}
