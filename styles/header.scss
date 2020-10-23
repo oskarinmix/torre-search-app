@@ -9,4 +9,21 @@ header {
   color: #f3f3f3;
   height: 60px;
   padding: 0px 50px;
+  .icons {
+    display: flex;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 30px;
+        margin-right: 10px;
+      }
+      h1 {
+        font-size: 18px;
+      }
+      margin: 10px 20px;
+    }
+  }
 }

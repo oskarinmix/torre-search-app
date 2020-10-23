@@ -5,15 +5,25 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  input,
+  select {
+    box-shadow: none;
+    outline: none;
+    border: 0;
+    &:selected,
+    &:focus {
+      box-shadow: none;
+      outline: none;
+      border: 0;
+    }
+  }
   input {
     width: 50%;
     background-color: #27292d;
     color: #f3f3f3;
     padding: 20px;
     font-weight: bold;
-    box-shadow: none;
-    outline: none;
+
     font-size: 30px;
   }
   select {
@@ -21,8 +31,7 @@ form {
     color: #f3f3f3;
     padding: 20px;
     font-weight: bold;
-    box-shadow: none;
-    outline: none;
+
     font-size: 30px;
   }
   button {
