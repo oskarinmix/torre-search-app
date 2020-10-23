@@ -28,7 +28,7 @@ Profile.getInitialProps = async (props) => {
   try {
     const resp = await Axios(
       `${
-        process.env.DOMAIN_SITE || "http://localhost:3000"
+        process.env.NEXT_PUBLIC_DOMAIN_SITE || "http://localhost:3000"
       }/api/opportunities/${id}`
     );
     return {
