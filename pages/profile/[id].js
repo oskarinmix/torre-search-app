@@ -26,7 +26,9 @@ const Profile = ({ data, error }) => {
 Profile.getInitialProps = async (props) => {
   const username = props.query.id;
   try {
-    const res = await Axios(`https://torre-search-app.netlify.app/api/profile/${username}`);
+    const res = await Axios(
+      `${process.env.domain || "http://localhost:3000"}/api/profile/${username}`
+    );
     return {
       data: res.data,
       error: false,
