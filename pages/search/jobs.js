@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import Link from "next/link";
 const SearchOpportunities = (props) => {
   const [search, setSearch] = React.useState("");
   const [results, setResults] = React.useState(null);
@@ -53,7 +54,11 @@ const SearchOpportunities = (props) => {
         <React.Fragment>
           <ul>
             {results.results.map((result) => (
-              <li key={result.id}>{result.objective}</li>
+              <li key={result.id}>
+                <Link href={`/opportunities/${result.id}`}>
+                  <a>{result.objective}</a>
+                </Link>
+              </li>
             ))}
           </ul>
           <button onClick={() => (page > 0 ? setPage(page - 1) : 0)}>
