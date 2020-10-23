@@ -64,7 +64,7 @@ export default function Home() {
         footer {
           width: 100%;
           height: 100px;
-          border-top: 1px solid #eaeaea;
+          border-top: 1px solid #cddc39;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -86,7 +86,7 @@ export default function Home() {
         }
 
         .title a {
-          color: #0070f3;
+          color: #cddc39;
           text-decoration: none;
         }
 
@@ -147,7 +147,7 @@ export default function Home() {
         .card:focus,
         .card:active {
           color: #0070f3;
-          border-color: #0070f3;
+          border-color: #cddc39;
         }
 
         .card h3 {

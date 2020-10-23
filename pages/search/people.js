@@ -66,6 +66,7 @@ const SearchPeople = () => {
             <Link href={`/profile/${result.username}`} key={result.subjectId}>
               <a>
                 <CardUser
+                  key={result.id}
                   img={result.picture}
                   name={result.name}
                   username={result.username}

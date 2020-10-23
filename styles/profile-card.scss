@@ -10,6 +10,18 @@
   align-items: center;
   border: 2px solid #cddc39;
   border-radius: 10px;
+  .languages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px;
+    span.language {
+      padding: 10px;
+      margin: 5px;
+      font-size: 15px;
+      border: 1px solid #f3f3f3;
+    }
+  }
   .skills {
     margin-top: 25px;
     display: flex;
@@ -18,6 +30,26 @@
     align-items: center;
     flex-wrap: wrap;
     span.skill {
+      padding: 10px;
+      margin: 5px;
+      font-size: 15px;
+      border: 1px solid #f3f3f3;
+    }
+  }
+  .stats {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
+    .stats-details {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+    span {
       padding: 10px;
       margin: 5px;
       font-size: 15px;

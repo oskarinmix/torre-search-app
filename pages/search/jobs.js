@@ -68,6 +68,7 @@ const SearchOpportunities = (props) => {
             <Link href={`/opportunities/${result.id}`} key={result.id}>
               <a>
                 <CardJob
+                  key={result.id}
                   img={result.organizations[0].picture}
                   title={result.objective}
                   company={result.organizations[0].name}
