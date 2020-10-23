@@ -33,3 +33,19 @@ You can access these endpoints:
 - A way for us to review your code through a control version system (for example, Github) where we can review your incremental progress
 - Anything else you'd like to share with us
 ```
+
+## Instructions for run the Project
+
+```
+`npm install`
+`npm run dev`
+
+```
+
+## Missings features
+
+### - Style Navigation Buttons
+
+### - Persisting Data for searching
+
+### - More details for Users & Jobs
