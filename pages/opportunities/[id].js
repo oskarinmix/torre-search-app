@@ -2,6 +2,8 @@ import React from "react";
 import Axios from "axios";
 import Layout from "../../components/Layout";
 import OpportunitiesError from "./../../components/OpportunitiesError";
+
+import JobDetails from "./../../components/JobDetails";
 const Profile = ({ data, error }) => {
   React.useEffect(() => {
     console.log("data", data);
@@ -16,17 +18,7 @@ const Profile = ({ data, error }) => {
   }
   return (
     <Layout>
-      <img src={data.organizations[0].picture} alt="profile" />
-      <h1>{data.objective}</h1>
-      <h2>{data.agreement.type.replace(/-/g, " ").toUpperCase()}</h2>
-      <h2>
-        {(
-          data.commitment.code.replace(/-/g, " ") +
-          " " +
-          "Employment"
-        ).toUpperCase()}
-      </h2>
-      <h2>{data.organizations[0].name}</h2>
+      <JobDetails data={data} />
     </Layout>
   );
 };
@@ -36,7 +28,7 @@ Profile.getInitialProps = async (props) => {
   try {
     const resp = await Axios(`http://localhost:3000/api/opportunities/${id}`);
     return {
-      data: res.data,
+      data: resp.data,
       error: false,
     };
   } catch (e) {

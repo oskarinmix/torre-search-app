@@ -3,7 +3,7 @@ import Axios from "axios";
 import Link from "next/link";
 import Layout from "../../components/Layout";
 import CardJob from "../../components/CardJob";
-
+import "../../styles/search.scss";
 const SearchOpportunities = (props) => {
   const [search, setSearch] = React.useState("");
   const [results, setResults] = React.useState(null);

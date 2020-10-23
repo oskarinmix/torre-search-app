@@ -1,24 +1,10 @@
 import React from "react";
 import "../styles/card-job.scss";
+import abbreviateNumber from "../helpers/Number";
 const defaultImg = "/img/default.jpg";
 
 const CardUser = ({ img, title, company, skills, compensation }) => {
   const printSalary = () => {
-    var SI_SYMBOL = ["", "k", "M", "G", "T", "P", "E"];
-
-    function abbreviateNumber(number) {
-      var tier = (Math.log10(number) / 3) | 0;
-
-      if (tier == 0) return number;
-
-      var suffix = SI_SYMBOL[tier];
-      var scale = Math.pow(10, tier * 3);
-
-      var scaled = number / scale;
-
-      return scaled.toFixed(1) + suffix;
-    }
-
     if (compensation) {
       const { minAmount, maxAmount, currency, periodicity } = compensation;
       return `${abbreviateNumber(minAmount)} - ${abbreviateNumber(
