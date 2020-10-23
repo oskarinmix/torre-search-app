@@ -44,3 +44,41 @@ form {
     font-size: 30px;
   }
 }
+
+@media (max-width: 425px) {
+  form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      width: 100%;
+      background-color: #27292d;
+      color: #f3f3f3;
+      padding: 20px;
+      font-weight: bold;
+
+      font-size: 20px;
+    }
+    select {
+      background-color: #27292d;
+      color: #f3f3f3;
+      padding: 20px 10px;
+      font-weight: bold;
+
+      font-size: 20px;
+    }
+    button {
+      background-color: #cddc39;
+      color: #27292d;
+      padding: 15px 20px;
+      box-shadow: none;
+      outline: none;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+}

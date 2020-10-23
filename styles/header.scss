@@ -27,3 +27,24 @@ header {
     }
   }
 }
+
+@media (max-width: 425px) {
+  header {
+    line-height: 10px;
+    padding: 0px 10px;
+    .icons {
+      display: flex;
+
+      a {
+        img {
+          height: 25 px;
+          margin-right: 5px;
+        }
+        h1 {
+          font-size: 16px;
+        }
+        margin: 10px 10px;
+      }
+    }
+  }
+}

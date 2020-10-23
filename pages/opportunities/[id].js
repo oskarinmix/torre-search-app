@@ -27,7 +27,9 @@ Profile.getInitialProps = async (props) => {
   const id = props.query.id;
   try {
     const resp = await Axios(
-      `${process.env.domain || "http://localhost:3000"}/api/opportunities/${id}`
+      `${
+        process.env.DOMAIN_SITE || "http://localhost:3000"
+      }/api/opportunities/${id}`
     );
     return {
       data: resp.data,
