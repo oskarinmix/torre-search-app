@@ -1,30 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+---
 
-First, run the development server:
+## The Problem
 
-```bash
-npm run dev
-# or
-yarn dev
+---
+
+Please show us your strengths/skills by building anything you'd like using data from Torre.
+
+###
+
+The goal is for us to get an idea of your skills/strengths in the areas of web development, software architecture, algorithms, innovation, strategic thinking, autonomy, learning, attention to detail, and communication. If you join our team, you'll be working on the full stack. As such, we'll be evaluating your potential in both front and back end development.
+
+You can access these endpoints:
+
+```
+- GET https://torre.bio/api/bios/$username (gets bio information of $username)
+- GET https://torre.co/api/opportunities/$id (gets job information of $id)
+- POST https://search.torre.co/opportunities/_search/?[offset=$offset&size=$size&aggregate=$aggregate]
+- POST https://search.torre.co/people/_search/?[offset=$offset&size=$size&aggregate=$aggregate]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### (search for jobs and people in general, you can see how it's being used here: https://torre.co/search).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### You can invest as much time as you'd like. Please log your progress. You have 24 hours to complete it.
 
-## Learn More
+## Your deliverables are:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+- A link for us to test what you built
+- Your progress log
+- A way for us to review your code through a control version system (for example, Github) where we can review your incremental progress
+- Anything else you'd like to share with us
+```
