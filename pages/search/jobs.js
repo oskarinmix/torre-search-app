@@ -7,6 +7,7 @@ const SearchOpportunities = (props) => {
   const [search, setSearch] = React.useState("");
   const [results, setResults] = React.useState(null);
   const [page, setPage] = React.useState(0);
+  const [pagSize, setPagSize] = React.useState(10);
 
   const getResults = async (page) => {
     const query = {
@@ -14,8 +15,8 @@ const SearchOpportunities = (props) => {
     };
     try {
       const resp = await Axios.post(
-        `https://search.torre.co/opportunities/_search/?aggregate=true&size=10&offset=${
-          page * 10
+        `https://search.torre.co/opportunities/_search/?aggregate=true&size=${pagSize}&offset=${
+          page * pagSize
         }`,
         query
       );
@@ -45,11 +46,19 @@ const SearchOpportunities = (props) => {
     <Layout>
       <form onSubmit={handleSubmit}>
         <input
-          placeholder="Search for opportunities"
+          placeholder="Search Opportunities"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button type="submit"> Search</button>
+        <select onChange={(e) => setPagSize(e.target.value)} value={pagSize}>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+        <button type="submit" disabled={search.length === 0}>
+          Search
+        </button>
       </form>
 
       {results && (

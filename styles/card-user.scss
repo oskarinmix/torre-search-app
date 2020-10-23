@@ -10,5 +10,21 @@
   h1 {
     padding: 20px;
   }
+  span {
+    color: #cddc39;
+    font-weight: bold;
+    padding: 20px;
+  }
   border: 1px solid #cddc39;
+
+  &:hover {
+    background-color: #cddc39;
+    h1 {
+      color: #27292d;
+    }
+    span {
+      color: #f3f3f3;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    }
+  }
 }

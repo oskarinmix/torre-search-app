@@ -55,7 +55,9 @@ const SearchPeople = () => {
           <option value="50">50</option>
           <option value="100">100</option>
         </select>
-        <button type="submit"> Search</button>
+        <button type="submit" disabled={search.length === 0}>
+          Search
+        </button>
       </form>
 
       {results && (

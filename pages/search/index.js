@@ -10,7 +10,7 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="/">Torre App!</a>
+          Search <a>in our Torre App!</a>
         </h1>
 
         <p className="description">
@@ -20,27 +20,17 @@ export default function Home() {
         <div className="grid">
           <a href="/search/people" className="card">
             <h3>Search People &rarr;</h3>
-            <p>Search people registered in Torre.co by name .</p>
+            <p className="description">Search for any User's profile</p>
           </a>
 
           <a href="/search/jobs" className="card">
             <h3>Search Jobs &rarr;</h3>
-            <p>Search any job oportunity in our Network!</p>
-          </a>
-
-          <a href="/profile" className="card">
-            <h3>User's Profile &rarr;</h3>
-            <p>Get in details the users profile.</p>
-          </a>
-
-          <a href="/opportunities" className="card">
-            <h3>Opportunities Details &rarr;</h3>
-            <p>Get in details any opportunity in Torre.</p>
+            <p className="description">
+              Search for a detailed Opportunities page
+            </p>
           </a>
         </div>
       </main>
-
-      <footer></footer>
 
       <style jsx>{`
         .container {
