@@ -7,9 +7,9 @@ export default function handler(req, res) {
   Axios.get(`https://torre.co/api/opportunities/${id}`)
     .then((resp) => res.status(200).json(resp.data))
     .catch((e) =>
-      res.status(400).json({
+      res.status(404).json({
         message: "Error Fetching job " + id,
-        error: e,
+
         ok: false,
       })
     );

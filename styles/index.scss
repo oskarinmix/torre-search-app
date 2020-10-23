@@ -8,6 +8,20 @@
     U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF, U+FFFD;
 }
+$darkGray: #27292d;
+$darkGray: #27292d;
 * {
   font-family: "Muli";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #f3f3f3;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+body {
+  background-color: black;
 }

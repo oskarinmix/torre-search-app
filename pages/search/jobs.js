@@ -1,6 +1,8 @@
 import React from "react";
 import Axios from "axios";
 import Link from "next/link";
+import Layout from "../../components/Layout";
+
 const SearchOpportunities = (props) => {
   const [search, setSearch] = React.useState("");
   const [results, setResults] = React.useState(null);
@@ -40,7 +42,7 @@ const SearchOpportunities = (props) => {
     setResults(null);
   }, [search]);
   return (
-    <React.Fragment>
+    <Layout>
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Search for opportunities"
@@ -71,7 +73,7 @@ const SearchOpportunities = (props) => {
           </h1>
         </React.Fragment>
       )}
-    </React.Fragment>
+    </Layout>
   );
 };
 

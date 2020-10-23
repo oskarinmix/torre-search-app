@@ -1,0 +1,36 @@
+form {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    width: 50%;
+    background-color: #27292d;
+    color: #f3f3f3;
+    padding: 20px;
+    font-weight: bold;
+    box-shadow: none;
+    outline: none;
+    font-size: 30px;
+  }
+  select {
+    background-color: #27292d;
+    color: #f3f3f3;
+    padding: 20px;
+    font-weight: bold;
+    box-shadow: none;
+    outline: none;
+    font-size: 30px;
+  }
+  button {
+    background-color: #cddc39;
+    color: #27292d;
+    padding: 20px 30px;
+    box-shadow: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 30px;
+  }
+}

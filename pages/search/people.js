@@ -1,6 +1,9 @@
 import React from "react";
 import Axios from "axios";
 import Link from "next/link";
+import Layout from "../../components/Layout";
+import CardUser from "./../../components/CardUser";
+import "../../styles/search.scss";
 const SearchPeople = () => {
   const [search, setSearch] = React.useState("");
   const [results, setResults] = React.useState(null);
@@ -39,7 +42,7 @@ const SearchPeople = () => {
     getResults();
   };
   return (
-    <React.Fragment>
+    <Layout>
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Search People"
@@ -57,15 +60,18 @@ const SearchPeople = () => {
 
       {results && (
         <React.Fragment>
-          <ul>
-            {results.results.map((result) => (
-              <li key={result.subjectId}>
-                <Link href={`/profile/${result.username}`}>
-                  <a>{result.name}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {results.results.map((result) => (
+            <Link href={`/profile/${result.username}`} key={result.subjectId}>
+              <a>
+                <CardUser
+                  img={result.picture}
+                  name={result.name}
+                  username={result.username}
+                />
+              </a>
+            </Link>
+          ))}
+
           <button onClick={() => (page > 0 ? setPage(page - 1) : 0)}>
             prev
           </button>
@@ -76,7 +82,7 @@ const SearchPeople = () => {
           </h1>
         </React.Fragment>
       )}
-    </React.Fragment>
+    </Layout>
   );
 };
 

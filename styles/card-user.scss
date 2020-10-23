@@ -1,0 +1,14 @@
+.card-user {
+  margin: 5px 5px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  img {
+    height: 90%;
+  }
+  h1 {
+    padding: 20px;
+  }
+  border: 1px solid #cddc39;
+}

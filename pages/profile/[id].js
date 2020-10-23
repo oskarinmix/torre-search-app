@@ -1,15 +1,23 @@
 import React from "react";
 import Axios from "axios";
-
+import Layout from "../../components/Layout";
+const defaultImg = "/img/default.jpg";
 const Profile = ({ data }) => {
   React.useEffect(() => {
     console.log("data", data);
   }, []);
   return (
-    <React.Fragment>
-      <img src={data.person.pictureThumbnail} alt="profile" />
+    <Layout>
+      <img
+        src={
+          data.person.pictureThumbnail
+            ? data.person.pictureThumbnail
+            : defaultImg
+        }
+        alt="profile"
+      />
       <h1>Perfil de {data.person.name}</h1>
-    </React.Fragment>
+    </Layout>
   );
 };
 
