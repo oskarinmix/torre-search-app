@@ -1,10 +1,19 @@
 import React from "react";
 import Axios from "axios";
 import Layout from "../../components/Layout";
-const Profile = ({ data }) => {
+import OpportunitiesError from "./../../components/OpportunitiesError";
+const Profile = ({ data, error }) => {
   React.useEffect(() => {
     console.log("data", data);
   }, []);
+
+  if (error) {
+    return (
+      <Layout>
+        <OpportunitiesError />
+      </Layout>
+    );
+  }
   return (
     <Layout>
       <img src={data.organizations[0].picture} alt="profile" />
@@ -24,11 +33,18 @@ const Profile = ({ data }) => {
 
 Profile.getInitialProps = async (props) => {
   const id = props.query.id;
-  const resp = await Axios(`http://localhost:3000/api/opportunities/${id}`);
-  console.log(resp.data);
-  return {
-    data: resp.data,
-  };
+  try {
+    const resp = await Axios(`http://localhost:3000/api/opportunities/${id}`);
+    return {
+      data: res.data,
+      error: false,
+    };
+  } catch (e) {
+    return {
+      data: e,
+      error: true,
+    };
+  }
 };
 
 export default Profile;
