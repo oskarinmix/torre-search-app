@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 export default function Home() {
   return (
@@ -10,40 +10,32 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Torre App!</a>
         </h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Get started by searching any jobs or people{" "}
         </p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="/search/people" className="card">
+            <h3>Search People &rarr;</h3>
+            <p>Search people registered in Torre.co by name .</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a href="/search/jobs" className="card">
+            <h3>Search Jobs &rarr;</h3>
+            <p>Search any job oportunity in our Network!</p>
           </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+          <a href="/profile" className="card">
+            <h3>User's Profile &rarr;</h3>
+            <p>Get in details the users profile.</p>
           </a>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+          <a href="/opportunities" className="card">
+            <h3>Opportunities Details &rarr;</h3>
+            <p>Get in details any opportunity in Torre.</p>
           </a>
         </div>
       </main>
@@ -54,7 +46,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
         </a>
       </footer>
@@ -205,5 +197,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
