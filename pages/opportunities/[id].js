@@ -2,7 +2,7 @@ import React from "react";
 import Axios from "axios";
 import Layout from "../../components/Layout";
 import OpportunitiesError from "./../../components/OpportunitiesError";
-
+import "../../styles/profile.scss";
 import JobDetails from "./../../components/JobDetails";
 const Profile = ({ data, error }) => {
   React.useEffect(() => {

@@ -3,6 +3,7 @@ import Axios from "axios";
 import Layout from "../../components/Layout";
 import ProfileCard from "../../components/ProfileCard";
 import ProfileError from "./../../components/ProfileError";
+import "../../styles/profile.scss";
 const defaultImg = "/img/default.jpg";
 const Profile = ({ data, error }) => {
   React.useEffect(() => {
